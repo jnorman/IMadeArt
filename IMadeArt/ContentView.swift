@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
+        VStack(spacing: 24) {
+            Image(systemName: "paintbrush.pointed.fill")
+                .font(.system(size: 48))
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Text("Did you make any art today?")
+                .font(.title2)
+                .fontWeight(.semibold)
+            
+            Button("I made something") {
+                print("Art recorded!")
+            }
+            .buttonStyle(.borderedProminent)
+            
         }
         .padding()
     }
